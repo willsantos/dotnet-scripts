@@ -1,6 +1,6 @@
 # Scripts para dotnet cli
 
-## ATENCÃO USE POR SUA CONTA E RISCO
+## ATENÇÃO USE POR SUA CONTA E RISCO
 
 Esses scripts estão em fase inicial e servem para  facilitar o meu trabalho, o uso e a modificação são livres, mas não tem nenhuma garantia de funcionamento.
 
