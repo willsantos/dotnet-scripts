@@ -35,16 +35,33 @@ dotnet add %1.Repository/%1.Repository.csproj reference %1.Domain/%1.Domain.cspr
 
 dotnet add %1.Service/%1.Service.csproj reference %1.Domain/%1.Domain.csproj
 
+cd %1.Api
+mkdir Controllers
+cd ..
+
 cd %1.CrossCutting
 dotnet add package AutoMapper
 dotnet add package Microsoft.Extensions.DependencyInjection.Abstractions
+mkdir DependencyInjection
+mkdir Mappers
 cd ..
+
+cd %1.Domain
+mkdir Contracts
+mkdir Entities
+mkdir Interfaces
+mkdir Interfaces/Repositories
+mkdir Interfaces/Services
+cd ..
+
 cd %1.IoC
 dotnet add package Microsoft.Extensions.DependencyInjection.Abstractions
 cd ..
+
 cd %1.Repository
 dotnet add package Microsoft.EntityFrameworkCore
 cd ..
+
 cd %1.Service
 dotnet add package AutoMapper
 cd ..
