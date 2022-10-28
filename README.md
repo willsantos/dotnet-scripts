@@ -20,5 +20,6 @@ Esses scripts estão em fase inicial e servem para  facilitar o meu trabalho, o 
 
 ### To-Do
 
-[] Referencias de Testes no script de Api
+- [ ] Referencias de Testes no script de Api
+- [ ] Adicionar arquivos genericos comuns a todos os projetos
 
