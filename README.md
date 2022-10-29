@@ -9,7 +9,7 @@ Esses scripts estão em fase inicial e servem para  facilitar o meu trabalho, o 
  - GeradorApiDDD-winx64
    - (execute o arquivo seguido do nome do projeto)
 ```
-  .\GeradorApiDDD-winx64  "Nome da Solução" "Nome do Projeto"
+  .\GeradorApiDDD-winx64 "Nome do Projeto"
   ```
  - GeradorConsole-winx64
    - (execute o arquivo seguido do nome da Solução espaco nome do projeto)
