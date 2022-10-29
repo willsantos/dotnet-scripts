@@ -34,6 +34,8 @@ dotnet add %1.IoC/%1.IoC.csproj reference %1.CrossCutting/%1.CrossCutting.csproj
 dotnet add %1.Repository/%1.Repository.csproj reference %1.Domain/%1.Domain.csproj
 
 dotnet add %1.Service/%1.Service.csproj reference %1.Domain/%1.Domain.csproj
+dotnet add %1.Testes/%1.Testes.csproj reference %1.Domain/%1.Domain.csproj
+dotnet add %1.Testes/%1.Testes.csproj reference %1.Api/%1.Api.csproj
 
 cd %1.Api
 mkdir Controllers
