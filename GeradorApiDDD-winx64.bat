@@ -14,7 +14,7 @@ dotnet new classlib -n %1.Domain
 dotnet new classlib -n %1.IoC
 dotnet new classlib -n %1.Repository
 dotnet new classlib -n %1.Service
-dotnet new mstest -n %1.Testes
+dotnet new xunit -n %1.Testes
 
 dotnet sln add %1.Api/%1.Api.csproj
 dotnet sln add %1.CrossCutting/%1.CrossCutting.csproj
