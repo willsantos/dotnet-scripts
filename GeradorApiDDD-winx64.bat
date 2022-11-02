@@ -72,6 +72,8 @@ cd %1.Service
 dotnet add package AutoMapper
 cd ..
 
+cp Auxiliary/NativeInjectorBootStrapper.cs %1.IoC/NativeInjectorBootStrapper.cs
+
 dotnet sln add %1.Testes/%1.Testes.csproj
 
 git init .
