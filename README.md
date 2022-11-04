@@ -23,3 +23,4 @@ Esses scripts estão em fase inicial e servem para  facilitar o meu trabalho, o 
 - [x] Referencias de Testes no script de Api
 - [ ] Adicionar arquivos genericos comuns a todos os projetos
 - [ ] Adicionar bibliotecas básicas
+- [ ] Preciso ver um jeito bom de atualizar linux e windows ao mesmo tempo
