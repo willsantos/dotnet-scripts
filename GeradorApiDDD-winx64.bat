@@ -1,5 +1,5 @@
-#Chame o script passando o nome da Solucao
-#Irá criar dentro de uma pasta com o mesmo nome da solução.
+REM Chame o script passando o nome da Solucao
+REM Irá criar dentro de uma pasta com o mesmo nome da solução.
 
 mkdir %1
 cd %1
