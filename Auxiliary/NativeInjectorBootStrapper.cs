@@ -1,7 +1,7 @@
-﻿using TEMPLATE.CrossCutting;
+﻿using %1.CrossCutting;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace TEMPLATE.IoC
+namespace %1.IoC
 {
     public static class NativeInjectorBootStrapper
     {
