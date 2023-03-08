@@ -62,12 +62,10 @@ cd ..
 xcopy /S /Q /Y /F ..\Auxiliary\bases\BaseController.cs  .\%1.Api\Controllers\BaseController.cs*
 
 //TODO: Definir arquivos que Vão ser copiados.
-xcopy /S /Q /Y /F ..\Auxiliary\DeleteMe.txt .\%1.CrossCutting\Mappers\DeleteMe.txt*
 xcopy /S /Q /Y /F ..\Auxiliary\DeleteMe.txt .\%1.Domain\Contracts\DeleteMe.txt*
 xcopy /S /Q /Y /F ..\Auxiliary\DeleteMe.txt .\%1.Domain\Entities\DeleteMe.txt*
 xcopy /S /Q /Y /F ..\Auxiliary\DeleteMe.txt .\%1.Domain\Interfaces\Repositories\DeleteMe.txt*
 xcopy /S /Q /Y /F ..\Auxiliary\DeleteMe.txt .\%1.Domain\Interfaces\Services\DeleteMe.txt*
-xcopy /S /Q /Y /F ..\Auxiliary\DeleteMe.txt .\%1.IoC\DeleteMe.txt*
 xcopy /S /Q /Y /F ..\Auxiliary\DeleteMe.txt .\%1.Repository\DeleteMe.txt*
 xcopy /S /Q /Y /F ..\Auxiliary\DeleteMe.txt .\%1.Service\DeleteMe.txt*
 xcopy /S /Q /Y /F ..\Auxiliary\Program.cs .\%1.Api\Program.cs*

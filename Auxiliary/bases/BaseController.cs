@@ -1,9 +1,9 @@
-using Academy.DDD.Domain.Entities;
-using Academy.DDD.Domain.Interfaces.Services;
+using DDD.Domain.Entities;
+using DDD.Domain.Interfaces.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Academy.DDD.API.Controllers
+namespace DDD.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
