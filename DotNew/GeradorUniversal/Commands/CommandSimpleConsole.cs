@@ -25,6 +25,8 @@ static class CommandSimpleConsole
             CommandDotNet.AddReferenciaProjetoTeste(nomeProjeto);
             CommandDotNet.Build(nomeProjeto);
             CommandDotNet.Test(nomeProjeto);
+            CommandDotNet.AddGitIgnore();
+            CommandGit.Base();
         }
         else
         {
