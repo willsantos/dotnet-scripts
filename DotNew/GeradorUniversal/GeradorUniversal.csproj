@@ -7,4 +7,16 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="Commands\CommandDotNet\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Commands\CommandDotNet\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Commands\CommandDotNet\**" />
+    </ItemGroup>
+
 </Project>
