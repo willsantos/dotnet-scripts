@@ -3,12 +3,12 @@ using System.Diagnostics;
 namespace GeradorUniversal.Extensions;
 static class ExecutaComando
 {
-    internal static void CallProcess( string args)
+    internal static void CallProcess( string app,string args)
     {
         Process process = new Process();
 
         // Configura o nome do programa a ser executado
-        process.StartInfo.FileName = "dotnet";
+        process.StartInfo.FileName = app;
 
         process.StartInfo.Arguments = args;
 
