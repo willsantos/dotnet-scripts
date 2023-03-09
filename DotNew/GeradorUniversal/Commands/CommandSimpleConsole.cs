@@ -20,6 +20,11 @@ static class CommandSimpleConsole
             CommandDotNet.CriaSolution(nomeProjeto);
             CommandDotNet.CriaConsole(nomeProjeto);
             CommandDotNet.CriaMsTest(nomeProjeto);
+            CommandDotNet.AddNaSolution(nomeProjeto);
+            CommandDotNet.AddNaSolutionTestes(nomeProjeto);
+            CommandDotNet.AddReferenciaProjetoTeste(nomeProjeto);
+            CommandDotNet.Build(nomeProjeto);
+            CommandDotNet.Test(nomeProjeto);
         }
         else
         {

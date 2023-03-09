@@ -25,4 +25,36 @@ static class CommandDotNet
 
         ExecutaComando.CallProcess(args);
     }
+    
+    public static void AddNaSolution(string nomeProjeto)
+    {
+        var args = $"sln add {nomeProjeto.ToPascalCase()}/{nomeProjeto.ToPascalCase()}.csproj";
+
+        ExecutaComando.CallProcess(args);
+    }
+    
+    public static void AddNaSolutionTestes(string nomeProjeto)
+    {
+        var args = $"sln add Testes{nomeProjeto.ToPascalCase()}/Testes{nomeProjeto.ToPascalCase()}.csproj";
+
+        ExecutaComando.CallProcess(args);
+    }
+    
+    public static void AddReferenciaProjetoTeste(string nomeProjeto)
+    {
+        var args = $"add Testes{nomeProjeto.ToPascalCase()}/Testes{nomeProjeto.ToPascalCase()}.csproj reference {nomeProjeto.ToPascalCase()}/{nomeProjeto.ToPascalCase()}.csproj";
+        ExecutaComando.CallProcess(args);
+    }
+    
+    public static void Build(string nomeProjeto)
+    {
+        var args = "build";
+        ExecutaComando.CallProcess(args);
+    }
+    
+    public static void Test(string nomeProjeto)
+    {
+        var args = $"test";
+        ExecutaComando.CallProcess(args);
+    }
 }
