@@ -21,9 +21,9 @@ static class Program
             Directory.CreateDirectory(nomeProjeto);
             Console.WriteLine($"Diretório {nomeProjeto} criado com sucesso!");
             Directory.SetCurrentDirectory(nomeProjeto);
-            CallProcess(nomeProjeto, CriaSolution());
-            CallProcess(nomeProjeto, CriaConsole());
-            CallProcess(nomeProjeto, CriaMsTest());
+            CriaSolution(nomeProjeto);
+            CriaConsole(nomeProjeto);
+            CriaMsTest(nomeProjeto);
         }
         else
         {
@@ -35,14 +35,14 @@ static class Program
         
     }
 
-    private static void CallProcess(string nomeProjeto, string args)
+    private static void CallProcess( string args)
     {
         Process process = new Process();
 
         // Configura o nome do programa a ser executado
         process.StartInfo.FileName = "dotnet";
 
-        process.StartInfo.Arguments = args + nomeProjeto.ToPascalCase();
+        process.StartInfo.Arguments = args;
 
         // Configura para que a saída do processo seja redirecionada para o console
         process.StartInfo.UseShellExecute = false;
@@ -59,21 +59,26 @@ static class Program
         process.WaitForExit();
     }
 
-    private static string CriaSolution()
+    private static void CriaSolution(string nomeProjeto)
     {
+        var args = $"new sln -n {nomeProjeto.ToPascalCase()}";
         
-        return "new sln -n ";
+        CallProcess(args);
 
     }
 
-    private static string CriaConsole()
+    private static void CriaConsole(string nomeProjeto)
     {
-        return "new console -n ";
+        var args = $"new console -n {nomeProjeto.ToPascalCase()}";
+        
+        CallProcess(args);
     }
 
-    private static string CriaMsTest()
+    private static void CriaMsTest(string nomeProjeto)
     {
-        return "new mstest -n Testes";
+        var args = $"new mstest -n Testes{nomeProjeto.ToPascalCase()}";
+        
+        CallProcess(args);
     }
     
     
