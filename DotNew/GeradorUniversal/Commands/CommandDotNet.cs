@@ -20,9 +20,16 @@ static class CommandDotNet
         ExecutaComando.CallProcess(_command,args);
     }
 
-    public static void CriaMsTest(string nomeProjeto)
+    public static void CriaClassLibrary(string nome,string nomeProjeto)
     {
-        var args = $"new mstest -n Testes{nomeProjeto.ToPascalCase()}";
+        var args = $"new classlib -n {nomeProjeto.ToPascalCase()}.{nome.ToPascalCase()}";
+
+        ExecutaComando.CallProcess(_command,args);
+    }
+    
+    public static void CriaWebApi(string nomeProjeto)
+    {
+        var args = $"new webapi -n {nomeProjeto.ToPascalCase()}.Api";
 
         ExecutaComando.CallProcess(_command,args);
     }
@@ -33,7 +40,19 @@ static class CommandDotNet
 
         ExecutaComando.CallProcess(_command,args);
     }
+    public static void CriaMsTest(string nomeProjeto)
+    {
+        var args = $"new mstest -n {nomeProjeto.ToPascalCase()}.Testes";
+
+        ExecutaComando.CallProcess(_command,args);
+    }
     
+    public static void CriaXUnit(string nomeProjeto)
+    {
+        var args = $"new xunit -n {nomeProjeto.ToPascalCase()}.Testes";
+
+        ExecutaComando.CallProcess(_command,args);
+    }
     public static void AddNaSolution(string nomeProjeto)
     {
         var args = $"sln add {nomeProjeto.ToPascalCase()}/{nomeProjeto.ToPascalCase()}.csproj";
@@ -43,8 +62,55 @@ static class CommandDotNet
     
     public static void AddNaSolutionTestes(string nomeProjeto)
     {
-        var args = $"sln add Testes{nomeProjeto.ToPascalCase()}/Testes{nomeProjeto.ToPascalCase()}.csproj";
+        var args = $"sln add {nomeProjeto.ToPascalCase()}.Testes/{nomeProjeto.ToPascalCase()}.Testes.csproj";
 
+        ExecutaComando.CallProcess(_command,args);
+    }
+    
+    public static void AddNaSolutionCrossCutting(string nomeProjeto)
+    {
+        var args = $"sln add {nomeProjeto.ToPascalCase()}.CrossCutting/{nomeProjeto.ToPascalCase()}.CrossCutting.csproj";
+
+        ExecutaComando.CallProcess(_command,args);
+    }
+    
+    public static void AddNaSolutionDomain(string nomeProjeto)
+    {
+        var args = $"sln add {nomeProjeto.ToPascalCase()}.Domain/{nomeProjeto.ToPascalCase()}.Domain.csproj";
+
+        ExecutaComando.CallProcess(_command,args);
+    }
+    
+    public static void AddNaSolutionIoC(string nomeProjeto)
+    {
+        var args = $"sln add {nomeProjeto.ToPascalCase()}.IoC/{nomeProjeto.ToPascalCase()}.IoC.csproj";
+
+        ExecutaComando.CallProcess(_command,args);
+    }
+    
+    public static void AddNaSolutionRepository(string nomeProjeto)
+    {
+        var args = $"sln add {nomeProjeto.ToPascalCase()}.Repository/{nomeProjeto.ToPascalCase()}.Repository.csproj";
+
+        ExecutaComando.CallProcess(_command,args);
+    }
+    
+    public static void AddNaSolutionService(string nomeProjeto)
+    {
+        var args = $"sln add {nomeProjeto.ToPascalCase()}.Service/{nomeProjeto.ToPascalCase()}.Service.csproj";
+
+        ExecutaComando.CallProcess(_command,args);
+    }
+    
+    public static void AddNaSolutionApi(string nomeProjeto)
+    {
+        var args = $"sln add {nomeProjeto.ToPascalCase()}.Api/{nomeProjeto.ToPascalCase()}.Api.csproj";
+
+        ExecutaComando.CallProcess(_command,args);
+    }
+    public static void AddReferencia(string nomeProjeto,string pastaA, string pastaB)
+    {
+        var args = $"add {nomeProjeto.ToPascalCase()}.{pastaA.ToPascalCase()}/{nomeProjeto.ToPascalCase()}.{pastaA.ToPascalCase()}.csproj reference {nomeProjeto.ToPascalCase()}.{pastaB.ToPascalCase()}/{nomeProjeto.ToPascalCase()}.{pastaB.ToPascalCase()}.csproj";
         ExecutaComando.CallProcess(_command,args);
     }
     
@@ -54,6 +120,11 @@ static class CommandDotNet
         ExecutaComando.CallProcess(_command,args);
     }
     
+    public static void AddPackage(string package)
+    {
+        var args = $"add package {package}";
+        ExecutaComando.CallProcess(_command,args);
+    }
     public static void Build(string nomeProjeto)
     {
         var args = "build";

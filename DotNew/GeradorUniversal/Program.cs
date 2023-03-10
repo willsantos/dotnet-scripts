@@ -10,6 +10,7 @@ static class Program
 {
     static void Main(string[] args)
     {
-        CommandSimpleConsole.CriaConsoleApp();
+        //CommandSimpleConsole.CriaConsoleApp();
+        CommandDddStella.CriaProjetoDddStella();
     }
 }
