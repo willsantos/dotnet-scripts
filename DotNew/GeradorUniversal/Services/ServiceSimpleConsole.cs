@@ -27,6 +27,8 @@ static class ServiceSimpleConsole
             CommandDotNet.Test(nomeProjeto);
             CommandDotNet.AddGitIgnore();
             CommandGit.Base();
+            Directory.SetCurrentDirectory($"..");
+            Console.WriteLine($"{nomeProjeto} console app criado com sucesso!");
         }
         else
         {

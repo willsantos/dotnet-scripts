@@ -86,6 +86,7 @@ public class ServiceDddStella
             CommandDotNet.Test(nomeProjeto);
             CommandDotNet.AddGitIgnore();
             CommandGit.Base();
+            Console.WriteLine($"{nomeProjeto} webApi DDD criado com sucesso!");
         }
         else
         {
