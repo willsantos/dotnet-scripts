@@ -116,7 +116,7 @@ static class CommandDotNet
     
     public static void AddReferenciaProjetoTeste(string nomeProjeto)
     {
-        var args = $"add Testes{nomeProjeto.ToPascalCase()}/Testes{nomeProjeto.ToPascalCase()}.csproj reference {nomeProjeto.ToPascalCase()}/{nomeProjeto.ToPascalCase()}.csproj";
+        var args = $"add {nomeProjeto.ToPascalCase()}.Testes/{nomeProjeto.ToPascalCase()}.Testes.csproj reference {nomeProjeto.ToPascalCase()}/{nomeProjeto.ToPascalCase()}.csproj";
         ExecutaComando.CallProcess(_command,args);
     }
     
