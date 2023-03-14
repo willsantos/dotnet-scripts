@@ -1,6 +1,6 @@
 namespace GeradorUniversal.Commands;
 
-static class CommandSimpleConsole
+static class ServiceSimpleConsole
 {
     internal static void CriaConsoleApp()
     {

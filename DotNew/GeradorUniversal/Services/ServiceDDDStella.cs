@@ -1,6 +1,6 @@
 namespace GeradorUniversal.Commands;
 
-public class CommandDddStella
+public class ServiceDddStella
 {
     internal static void CriaProjetoDddStella()
     {
